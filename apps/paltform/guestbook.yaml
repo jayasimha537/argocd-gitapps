@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/jayasimha537/platform-config.git
     targetRevision: main
-    path: kubernetes
+    path: kubernetes/platform/nginx/dev/
   destination: 
     server: https://kubernetes.default.svc
   syncPolicy:
