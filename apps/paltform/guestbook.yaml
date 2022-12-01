@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/jayasimha537/platform-config.git
-    targetRevision: dev
+    targetRevision: main
     path: kubernetes
   destination: 
     server: https://kubernetes.default.svc
