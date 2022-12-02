@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: platform-tomcat-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jayasimha537/platform-config.git
+    targetRevision: main
+    path: kubernetes/platform/tomcat/dev/
+  destination: 
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true 
